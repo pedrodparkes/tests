@@ -27,3 +27,15 @@
 *.exe
 *.out
 *.app
+
+# media files
+*.png
+*.jpg
+*.jpeg
+*.mp4
+*.avi
+*.mkv
+
+# vim temp files
+*~
+*.swp
