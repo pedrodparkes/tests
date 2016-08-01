@@ -1,3 +1,17 @@
+# local rules
+*~
+*.*~
+*.db
+*.pdb
+*.opendb
+*.swp
+*.user
+*.log
+OpenCvPlayground/x64
+OpenCvPlayground/x86
+x64
+x86
+
 # Compiled Object files
 *.slo
 *.lo
@@ -35,7 +49,4 @@
 *.mp4
 *.avi
 *.mkv
-
-# vim temp files
-*~
-*.swp
+*.flo

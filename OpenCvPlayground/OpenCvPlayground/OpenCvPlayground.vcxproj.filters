@@ -1,0 +1,459 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Source Files\samples">
+      <UniqueIdentifier>{56953667-20a5-471b-a0ba-57228b1720ff}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="cppSamples\autofocus.cpp">
+      <Filter>Source Files\samples</Filter>
+    </ClCompile>
+    <ClCompile Include="cppSamples\bgfg_segm.cpp">
+      <Filter>Source Files\samples</Filter>
+    </ClCompile>
+    <ClCompile Include="cppSamples\calibration.cpp">
+      <Filter>Source Files\samples</Filter>
+    </ClCompile>
+    <ClCompile Include="cppSamples\calibration3.cpp">
+      <Filter>Source Files\samples</Filter>
+    </ClCompile>
+    <ClCompile Include="cppSamples\camshiftdemo.cpp">
+      <Filter>Source Files\samples</Filter>
+    </ClCompile>
+    <ClCompile Include="cppSamples\cloning_demo.cpp">
+      <Filter>Source Files\samples</Filter>
+    </ClCompile>
+    <ClCompile Include="cppSamples\cloning_gui.cpp">
+      <Filter>Source Files\samples</Filter>
+    </ClCompile>
+    <ClCompile Include="cppSamples\connected_components.cpp">
+      <Filter>Source Files\samples</Filter>
+    </ClCompile>
+    <ClCompile Include="cppSamples\contours2.cpp">
+      <Filter>Source Files\samples</Filter>
+    </ClCompile>
+    <ClCompile Include="cppSamples\convexhull.cpp">
+      <Filter>Source Files\samples</Filter>
+    </ClCompile>
+    <ClCompile Include="cppSamples\cout_mat.cpp">
+      <Filter>Source Files\samples</Filter>
+    </ClCompile>
+    <ClCompile Include="cppSamples\create_mask.cpp">
+      <Filter>Source Files\samples</Filter>
+    </ClCompile>
+    <ClCompile Include="cppSamples\dbt_face_detection.cpp">
+      <Filter>Source Files\samples</Filter>
+    </ClCompile>
+    <ClCompile Include="cppSamples\delaunay2.cpp">
+      <Filter>Source Files\samples</Filter>
+    </ClCompile>
+    <ClCompile Include="cppSamples\demhist.cpp">
+      <Filter>Source Files\samples</Filter>
+    </ClCompile>
+    <ClCompile Include="cppSamples\detect_blob.cpp">
+      <Filter>Source Files\samples</Filter>
+    </ClCompile>
+    <ClCompile Include="cppSamples\detect_mser.cpp">
+      <Filter>Source Files\samples</Filter>
+    </ClCompile>
+    <ClCompile Include="cppSamples\dft.cpp">
+      <Filter>Source Files\samples</Filter>
+    </ClCompile>
+    <ClCompile Include="cppSamples\distrans.cpp">
+      <Filter>Source Files\samples</Filter>
+    </ClCompile>
+    <ClCompile Include="cppSamples\drawing.cpp">
+      <Filter>Source Files\samples</Filter>
+    </ClCompile>
+    <ClCompile Include="cppSamples\edge.cpp">
+      <Filter>Source Files\samples</Filter>
+    </ClCompile>
+    <ClCompile Include="cppSamples\em.cpp">
+      <Filter>Source Files\samples</Filter>
+    </ClCompile>
+    <ClCompile Include="cppSamples\facedetect.cpp">
+      <Filter>Source Files\samples</Filter>
+    </ClCompile>
+    <ClCompile Include="cppSamples\facial_features.cpp">
+      <Filter>Source Files\samples</Filter>
+    </ClCompile>
+    <ClCompile Include="cppSamples\fback.cpp">
+      <Filter>Source Files\samples</Filter>
+    </ClCompile>
+    <ClCompile Include="cppSamples\ffilldemo.cpp">
+      <Filter>Source Files\samples</Filter>
+    </ClCompile>
+    <ClCompile Include="cppSamples\filestorage.cpp">
+      <Filter>Source Files\samples</Filter>
+    </ClCompile>
+    <ClCompile Include="cppSamples\fitellipse.cpp">
+      <Filter>Source Files\samples</Filter>
+    </ClCompile>
+    <ClCompile Include="cppSamples\grabcut.cpp">
+      <Filter>Source Files\samples</Filter>
+    </ClCompile>
+    <ClCompile Include="cppSamples\houghcircles.cpp">
+      <Filter>Source Files\samples</Filter>
+    </ClCompile>
+    <ClCompile Include="cppSamples\houghlines.cpp">
+      <Filter>Source Files\samples</Filter>
+    </ClCompile>
+    <ClCompile Include="cppSamples\image.cpp">
+      <Filter>Source Files\samples</Filter>
+    </ClCompile>
+    <ClCompile Include="cppSamples\image_alignment.cpp">
+      <Filter>Source Files\samples</Filter>
+    </ClCompile>
+    <ClCompile Include="cppSamples\image_sequence.cpp">
+      <Filter>Source Files\samples</Filter>
+    </ClCompile>
+    <ClCompile Include="cppSamples\imagelist_creator.cpp">
+      <Filter>Source Files\samples</Filter>
+    </ClCompile>
+    <ClCompile Include="cppSamples\inpaint.cpp">
+      <Filter>Source Files\samples</Filter>
+    </ClCompile>
+    <ClCompile Include="cppSamples\intelperc_capture.cpp">
+      <Filter>Source Files\samples</Filter>
+    </ClCompile>
+    <ClCompile Include="cppSamples\kalman.cpp">
+      <Filter>Source Files\samples</Filter>
+    </ClCompile>
+    <ClCompile Include="cppSamples\kmeans.cpp">
+      <Filter>Source Files\samples</Filter>
+    </ClCompile>
+    <ClCompile Include="cppSamples\laplace.cpp">
+      <Filter>Source Files\samples</Filter>
+    </ClCompile>
+    <ClCompile Include="cppSamples\letter_recog.cpp">
+      <Filter>Source Files\samples</Filter>
+    </ClCompile>
+    <ClCompile Include="cppSamples\lkdemo.cpp">
+      <Filter>Source Files\samples</Filter>
+    </ClCompile>
+    <ClCompile Include="cppSamples\logistic_regression.cpp">
+      <Filter>Source Files\samples</Filter>
+    </ClCompile>
+    <ClCompile Include="cppSamples\lsd_lines.cpp">
+      <Filter>Source Files\samples</Filter>
+    </ClCompile>
+    <ClCompile Include="cppSamples\mask_tmpl.cpp">
+      <Filter>Source Files\samples</Filter>
+    </ClCompile>
+    <ClCompile Include="cppSamples\matchmethod_orb_akaze_brisk.cpp">
+      <Filter>Source Files\samples</Filter>
+    </ClCompile>
+    <ClCompile Include="cppSamples\minarea.cpp">
+      <Filter>Source Files\samples</Filter>
+    </ClCompile>
+    <ClCompile Include="cppSamples\morphology2.cpp">
+      <Filter>Source Files\samples</Filter>
+    </ClCompile>
+    <ClCompile Include="cppSamples\npr_demo.cpp">
+      <Filter>Source Files\samples</Filter>
+    </ClCompile>
+    <ClCompile Include="cppSamples\opencv_version.cpp">
+      <Filter>Source Files\samples</Filter>
+    </ClCompile>
+    <ClCompile Include="cppSamples\openni_capture.cpp">
+      <Filter>Source Files\samples</Filter>
+    </ClCompile>
+    <ClCompile Include="cppSamples\pca.cpp">
+      <Filter>Source Files\samples</Filter>
+    </ClCompile>
+    <ClCompile Include="cppSamples\phase_corr.cpp">
+      <Filter>Source Files\samples</Filter>
+    </ClCompile>
+    <ClCompile Include="cppSamples\points_classifier.cpp">
+      <Filter>Source Files\samples</Filter>
+    </ClCompile>
+    <ClCompile Include="cppSamples\polar_transforms.cpp">
+      <Filter>Source Files\samples</Filter>
+    </ClCompile>
+    <ClCompile Include="cppSamples\segment_objects.cpp">
+      <Filter>Source Files\samples</Filter>
+    </ClCompile>
+    <ClCompile Include="cppSamples\select3dobj.cpp">
+      <Filter>Source Files\samples</Filter>
+    </ClCompile>
+    <ClCompile Include="cppSamples\shape_example.cpp">
+      <Filter>Source Files\samples</Filter>
+    </ClCompile>
+    <ClCompile Include="cppSamples\smiledetect.cpp">
+      <Filter>Source Files\samples</Filter>
+    </ClCompile>
+    <ClCompile Include="cppSamples\squares.cpp">
+      <Filter>Source Files\samples</Filter>
+    </ClCompile>
+    <ClCompile Include="cppSamples\starter_imagelist.cpp">
+      <Filter>Source Files\samples</Filter>
+    </ClCompile>
+    <ClCompile Include="cppSamples\starter_video.cpp">
+      <Filter>Source Files\samples</Filter>
+    </ClCompile>
+    <ClCompile Include="cppSamples\stereo_calib.cpp">
+      <Filter>Source Files\samples</Filter>
+    </ClCompile>
+    <ClCompile Include="cppSamples\stereo_match.cpp">
+      <Filter>Source Files\samples</Filter>
+    </ClCompile>
+    <ClCompile Include="cppSamples\stitching.cpp">
+      <Filter>Source Files\samples</Filter>
+    </ClCompile>
+    <ClCompile Include="cppSamples\stitching_detailed.cpp">
+      <Filter>Source Files\samples</Filter>
+    </ClCompile>
+    <ClCompile Include="cppSamples\train_HOG.cpp">
+      <Filter>Source Files\samples</Filter>
+    </ClCompile>
+    <ClCompile Include="cppSamples\tree_engine.cpp">
+      <Filter>Source Files\samples</Filter>
+    </ClCompile>
+    <ClCompile Include="cppSamples\tvl1_optical_flow.cpp">
+      <Filter>Source Files\samples</Filter>
+    </ClCompile>
+    <ClCompile Include="cppSamples\videostab.cpp">
+      <Filter>Source Files\samples</Filter>
+    </ClCompile>
+    <ClCompile Include="cppSamples\watershed.cpp">
+      <Filter>Source Files\samples</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="OpenCV_debug.props" />
+    <None Include="OpenCV_release.props" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="cppSamples\autofocus.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="cppSamples\bgfg_segm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="cppSamples\calibration.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="cppSamples\calibration3.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="cppSamples\camshiftdemo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="cppSamples\cloning_demo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="cppSamples\cloning_gui.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="cppSamples\connected_components.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="cppSamples\contours2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="cppSamples\convexhull.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="cppSamples\cout_mat.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="cppSamples\create_mask.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="cppSamples\dbt_face_detection.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="cppSamples\delaunay2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="cppSamples\demhist.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="cppSamples\detect_blob.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="cppSamples\detect_mser.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="cppSamples\dft.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="cppSamples\distrans.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="cppSamples\drawing.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="cppSamples\edge.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="cppSamples\em.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="cppSamples\facedetect.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="cppSamples\facial_features.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="cppSamples\fback.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="cppSamples\ffilldemo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="cppSamples\filestorage.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="cppSamples\fitellipse.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="cppSamples\grabcut.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="cppSamples\houghcircles.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="cppSamples\houghlines.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="cppSamples\image.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="cppSamples\image_sequence.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="cppSamples\imagelist_creator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="cppSamples\inpaint.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="cppSamples\intelperc_capture.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="cppSamples\kalman.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="cppSamples\kmeans.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="cppSamples\laplace.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="cppSamples\letter_recog.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="cppSamples\lkdemo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="cppSamples\logistic_regression.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="cppSamples\lsd_lines.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="cppSamples\mask_tmpl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="cppSamples\matchmethod_orb_akaze_brisk.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="cppSamples\minarea.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="cppSamples\morphology2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="cppSamples\npr_demo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="cppSamples\opencv_version.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="cppSamples\openni_capture.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="cppSamples\pca.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="cppSamples\phase_corr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="cppSamples\points_classifier.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="cppSamples\polar_transforms.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="cppSamples\segment_objects.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="cppSamples\select3dobj.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="cppSamples\shape_example.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="cppSamples\smiledetect.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="cppSamples\squares.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="cppSamples\starter_imagelist.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="cppSamples\starter_video.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="cppSamples\stereo_match.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="cppSamples\stitching.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="cppSamples\stitching_detailed.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="cppSamples\train_HOG.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="cppSamples\tree_engine.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="cppSamples\tvl1_optical_flow.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="cppSamples\videostab.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="cppSamples\watershed.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="cppSamples\stereo_calib.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="mediaSamples\opencv-logo.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
+</Project>

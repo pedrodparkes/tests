@@ -1,0 +1,303 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{B3A08DF8-6C42-4EE8-93EE-AF06C696E6DD}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>OpenCvPlayground</RootNamespace>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="OpenCV_debug.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="OpenCV_release.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>opencv_world310d.lib;opencv_world310.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="cppSamples\autofocus.cpp" />
+    <ClCompile Include="cppSamples\bgfg_segm.cpp" />
+    <ClCompile Include="cppSamples\calibration.cpp" />
+    <ClCompile Include="cppSamples\calibration3.cpp" />
+    <ClCompile Include="cppSamples\camshiftdemo.cpp" />
+    <ClCompile Include="cppSamples\cloning_demo.cpp" />
+    <ClCompile Include="cppSamples\cloning_gui.cpp" />
+    <ClCompile Include="cppSamples\connected_components.cpp" />
+    <ClCompile Include="cppSamples\contours2.cpp" />
+    <ClCompile Include="cppSamples\convexhull.cpp" />
+    <ClCompile Include="cppSamples\cout_mat.cpp" />
+    <ClCompile Include="cppSamples\create_mask.cpp" />
+    <ClCompile Include="cppSamples\dbt_face_detection.cpp" />
+    <ClCompile Include="cppSamples\delaunay2.cpp" />
+    <ClCompile Include="cppSamples\demhist.cpp" />
+    <ClCompile Include="cppSamples\detect_blob.cpp" />
+    <ClCompile Include="cppSamples\detect_mser.cpp" />
+    <ClCompile Include="cppSamples\dft.cpp" />
+    <ClCompile Include="cppSamples\distrans.cpp" />
+    <ClCompile Include="cppSamples\drawing.cpp" />
+    <ClCompile Include="cppSamples\edge.cpp" />
+    <ClCompile Include="cppSamples\em.cpp" />
+    <ClCompile Include="cppSamples\facedetect.cpp" />
+    <ClCompile Include="cppSamples\facial_features.cpp" />
+    <ClCompile Include="cppSamples\fback.cpp" />
+    <ClCompile Include="cppSamples\ffilldemo.cpp" />
+    <ClCompile Include="cppSamples\filestorage.cpp" />
+    <ClCompile Include="cppSamples\fitellipse.cpp" />
+    <ClCompile Include="cppSamples\grabcut.cpp" />
+    <ClCompile Include="cppSamples\houghcircles.cpp" />
+    <ClCompile Include="cppSamples\houghlines.cpp" />
+    <ClCompile Include="cppSamples\image.cpp" />
+    <ClCompile Include="cppSamples\imagelist_creator.cpp" />
+    <ClCompile Include="cppSamples\image_alignment.cpp" />
+    <ClCompile Include="cppSamples\image_sequence.cpp" />
+    <ClCompile Include="cppSamples\inpaint.cpp" />
+    <ClCompile Include="cppSamples\intelperc_capture.cpp" />
+    <ClCompile Include="cppSamples\kalman.cpp" />
+    <ClCompile Include="cppSamples\kmeans.cpp" />
+    <ClCompile Include="cppSamples\laplace.cpp" />
+    <ClCompile Include="cppSamples\letter_recog.cpp" />
+    <ClCompile Include="cppSamples\lkdemo.cpp" />
+    <ClCompile Include="cppSamples\logistic_regression.cpp" />
+    <ClCompile Include="cppSamples\lsd_lines.cpp" />
+    <ClCompile Include="cppSamples\mask_tmpl.cpp" />
+    <ClCompile Include="cppSamples\matchmethod_orb_akaze_brisk.cpp" />
+    <ClCompile Include="cppSamples\minarea.cpp" />
+    <ClCompile Include="cppSamples\morphology2.cpp" />
+    <ClCompile Include="cppSamples\npr_demo.cpp" />
+    <ClCompile Include="cppSamples\opencv_version.cpp" />
+    <ClCompile Include="cppSamples\openni_capture.cpp" />
+    <ClCompile Include="cppSamples\pca.cpp" />
+    <ClCompile Include="cppSamples\phase_corr.cpp" />
+    <ClCompile Include="cppSamples\points_classifier.cpp" />
+    <ClCompile Include="cppSamples\polar_transforms.cpp" />
+    <ClCompile Include="cppSamples\segment_objects.cpp" />
+    <ClCompile Include="cppSamples\select3dobj.cpp" />
+    <ClCompile Include="cppSamples\shape_example.cpp" />
+    <ClCompile Include="cppSamples\smiledetect.cpp" />
+    <ClCompile Include="cppSamples\squares.cpp" />
+    <ClCompile Include="cppSamples\starter_imagelist.cpp" />
+    <ClCompile Include="cppSamples\starter_video.cpp" />
+    <ClCompile Include="cppSamples\stereo_calib.cpp" />
+    <ClCompile Include="cppSamples\stereo_match.cpp" />
+    <ClCompile Include="cppSamples\stitching.cpp" />
+    <ClCompile Include="cppSamples\stitching_detailed.cpp" />
+    <ClCompile Include="cppSamples\train_HOG.cpp" />
+    <ClCompile Include="cppSamples\tree_engine.cpp" />
+    <ClCompile Include="cppSamples\tvl1_optical_flow.cpp" />
+    <ClCompile Include="cppSamples\videostab.cpp" />
+    <ClCompile Include="cppSamples\watershed.cpp" />
+    <ClCompile Include="main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="OpenCV_debug.props" />
+    <None Include="OpenCV_release.props" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="cppSamples\autofocus.h" />
+    <ClInclude Include="cppSamples\bgfg_segm.h" />
+    <ClInclude Include="cppSamples\calibration.h" />
+    <ClInclude Include="cppSamples\calibration3.h" />
+    <ClInclude Include="cppSamples\camshiftdemo.h" />
+    <ClInclude Include="cppSamples\cloning_demo.h" />
+    <ClInclude Include="cppSamples\cloning_gui.h" />
+    <ClInclude Include="cppSamples\connected_components.h" />
+    <ClInclude Include="cppSamples\contours2.h" />
+    <ClInclude Include="cppSamples\convexhull.h" />
+    <ClInclude Include="cppSamples\cout_mat.h" />
+    <ClInclude Include="cppSamples\create_mask.h" />
+    <ClInclude Include="cppSamples\dbt_face_detection.h" />
+    <ClInclude Include="cppSamples\delaunay2.h" />
+    <ClInclude Include="cppSamples\demhist.h" />
+    <ClInclude Include="cppSamples\detect_blob.h" />
+    <ClInclude Include="cppSamples\detect_mser.h" />
+    <ClInclude Include="cppSamples\dft.h" />
+    <ClInclude Include="cppSamples\distrans.h" />
+    <ClInclude Include="cppSamples\drawing.h" />
+    <ClInclude Include="cppSamples\edge.h" />
+    <ClInclude Include="cppSamples\em.h" />
+    <ClInclude Include="cppSamples\facedetect.h" />
+    <ClInclude Include="cppSamples\facial_features.h" />
+    <ClInclude Include="cppSamples\fback.h" />
+    <ClInclude Include="cppSamples\ffilldemo.h" />
+    <ClInclude Include="cppSamples\filestorage.h" />
+    <ClInclude Include="cppSamples\fitellipse.h" />
+    <ClInclude Include="cppSamples\grabcut.h" />
+    <ClInclude Include="cppSamples\houghcircles.h" />
+    <ClInclude Include="cppSamples\houghlines.h" />
+    <ClInclude Include="cppSamples\image.h" />
+    <ClInclude Include="cppSamples\imagelist_creator.h" />
+    <ClInclude Include="cppSamples\image_sequence.h" />
+    <ClInclude Include="cppSamples\inpaint.h" />
+    <ClInclude Include="cppSamples\intelperc_capture.h" />
+    <ClInclude Include="cppSamples\kalman.h" />
+    <ClInclude Include="cppSamples\kmeans.h" />
+    <ClInclude Include="cppSamples\laplace.h" />
+    <ClInclude Include="cppSamples\letter_recog.h" />
+    <ClInclude Include="cppSamples\lkdemo.h" />
+    <ClInclude Include="cppSamples\logistic_regression.h" />
+    <ClInclude Include="cppSamples\lsd_lines.h" />
+    <ClInclude Include="cppSamples\mask_tmpl.h" />
+    <ClInclude Include="cppSamples\matchmethod_orb_akaze_brisk.h" />
+    <ClInclude Include="cppSamples\minarea.h" />
+    <ClInclude Include="cppSamples\morphology2.h" />
+    <ClInclude Include="cppSamples\npr_demo.h" />
+    <ClInclude Include="cppSamples\opencv_version.h" />
+    <ClInclude Include="cppSamples\openni_capture.h" />
+    <ClInclude Include="cppSamples\pca.h" />
+    <ClInclude Include="cppSamples\phase_corr.h" />
+    <ClInclude Include="cppSamples\points_classifier.h" />
+    <ClInclude Include="cppSamples\polar_transforms.h" />
+    <ClInclude Include="cppSamples\segment_objects.h" />
+    <ClInclude Include="cppSamples\select3dobj.h" />
+    <ClInclude Include="cppSamples\shape_example.h" />
+    <ClInclude Include="cppSamples\smiledetect.h" />
+    <ClInclude Include="cppSamples\squares.h" />
+    <ClInclude Include="cppSamples\starter_imagelist.h" />
+    <ClInclude Include="cppSamples\starter_video.h" />
+    <ClInclude Include="cppSamples\stereo_calib.h" />
+    <ClInclude Include="cppSamples\stereo_match.h" />
+    <ClInclude Include="cppSamples\stitching.h" />
+    <ClInclude Include="cppSamples\stitching_detailed.h" />
+    <ClInclude Include="cppSamples\train_HOG.h" />
+    <ClInclude Include="cppSamples\tree_engine.h" />
+    <ClInclude Include="cppSamples\tvl1_optical_flow.h" />
+    <ClInclude Include="cppSamples\videostab.h" />
+    <ClInclude Include="cppSamples\watershed.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="mediaSamples\opencv-logo.png" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
