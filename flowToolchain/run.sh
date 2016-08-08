@@ -87,8 +87,9 @@ if [ $count -le 0 ]; then
 	echo input type is $(fiel $extension)
 	echo extracting $(file $filefull) frames into $(dir $dirname) directory
 	printf "\n\n-----------------------------------------------------------------\n"
-	ffmpeg -i $file -f image2 $frameformat
+	ffmpeg -i $file -f image2 -s 256x144 $frameformat
 	printf "\n-----------------------------------------------------------------\n\n"
+	count=`ls 2>/dev/null -Ub1 -- $framemask | wc -l`
 else
 	# some files already exist, skip this step
 	echo there are files satisfiing $(file $framemask), skiping frames extraction
@@ -118,19 +119,21 @@ if [ $flowcount -le 0 ]; then
 	# no flow files, generate
 	echo generating flow files
 
+	echo $count
 	# iterate through frame files
 	prev=`printf $frameformat 1`
 	for ((i=1;i<count;i++)); do
 		next=`printf $frameformat $((i+1))`
 		flowfile=`printf $flowformat $i`
 		dif=$(diff -q $prev $next)
-		if [ "$dif" != "" ]; then
+#		if [ "$dif" != "" ]; then
 			echo -ne generate flow from $(file $prev) to $(file $next) "->" $(file $flowfile) \($i/$count\)\\r 
 	#		sleep 0.05
 			./tvl1/tvl1flow $prev $next $flowfile
-		fi
+#		fi
 		prev=$next
 	done
+	flowcount=`ls 2>/dev/null -Ub1 -- $flowmask | wc -l`
 	echo 
 else
 	# flow files already exist, skip
