@@ -1,4 +1,7 @@
 #include "writePng.h"
+#include "hsvToRgb.h"
+#include "stdlib.h"
+#include "string.h"
 
 static inline void setRGB(png_byte *ptr, float val)
 {
@@ -18,7 +21,8 @@ static inline void setRGB(png_byte *ptr, float val)
 	}
 }
 
-int writePng(char* filename, int width, int height, float* buffer, char* title)
+int writePng(char* filename, int width, int height, float* hue, float* saturation, char* title)
+//int writePng(char* filename, int width, int height, float* buffer, char* title)
 {
 	int code = 0;
 	FILE *fp = NULL;
@@ -75,12 +79,15 @@ int writePng(char* filename, int width, int height, float* buffer, char* title)
 
 		row = (png_bytep) malloc(3*width*sizeof(png_byte));
 
+		printf("bytep %d byte %d\n", sizeof(png_bytep), sizeof(png_byte));
 		int x, y;
 		for(y = 0; y<height; y++)
 		{
 			for(x = 0; x<width; x++)
 			{
-				setRGB(&(row[x*3]), buffer[y*width + x]);
+//				setRGB(&(row[x*3]), buffer[y*width + x]);
+				hsvToRgb(&(row[x*3]), hue[y*width + x]*360.f, saturation[y*width + x], 1.0f);
+//				hsvToRgb(&(row[x*3]), h, s, v);
 			}
 			png_write_row(png_ptr, row);
 		}
@@ -120,10 +127,18 @@ int main(int argc, char *argv[])
 		return 1;
 	}
 
+	float* saturation = malloc(width*height*sizeof(float));
+//	memset(saturation, 0, width*height*sizeof(float));
+	for(int i = 0; i<width; i++)
+		for(int j = 0; j<height; j++)
+		{
+			saturation[j*width + i] = 1.f;	
+		}
+
 	// Save the image to a PNG file
 	// The 'title' string is stored as part of the PNG file
 	printf("Saving PNG\n");
-	int result = writePng(argv[1], width, height, buffer, "This is my test image");
+	int result = writePng(argv[1], width, height, buffer, saturation, "This is my test image");//, atof(argv[2]), atof(argv[3]), atof(argv[4]));
 
 	// Free up the memorty used to store the image
 	free(buffer);

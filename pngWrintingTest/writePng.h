@@ -12,7 +12,8 @@ static inline void setRGB(png_byte *ptr, float val);
 
 // This function actually writes out the PNG image file. The string 'title' is
 // also written into the image file
-int writePng(char* filename, int width, int height, float* buffer, char* title);
+//int writePng(char* filename, int width, int height, float* buffer, char* title);
+int writePng(char* filename, int width, int height, float* hue, float* saturation, char* title);
 // 0 is success
 // -1 - generic error
 
