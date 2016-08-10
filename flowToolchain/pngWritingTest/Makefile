@@ -10,3 +10,6 @@ all:
 clean:
 	rm -f writePng testBin hsvToRgb.o *.png
 
+test:
+	./testBin 162 1 1
+
