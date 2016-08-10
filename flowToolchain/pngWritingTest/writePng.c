@@ -79,7 +79,7 @@ int writePng(char* filename, int width, int height, float* hue, float* saturatio
 
 		row = (png_bytep) malloc(3*width*sizeof(png_byte));
 
-		printf("bytep %d byte %d\n", sizeof(png_bytep), sizeof(png_byte));
+//		printf("bytep %d byte %d\n", sizeof(png_bytep), sizeof(png_byte));
 		int x, y;
 		for(y = 0; y<height; y++)
 		{
@@ -106,7 +106,7 @@ int writePng(char* filename, int width, int height, float* hue, float* saturatio
 	return code;
 }
 
-
+/*
 int main(int argc, char *argv[])
 {
 	// Make sure that the output filename argument has been provided
@@ -145,6 +145,7 @@ int main(int argc, char *argv[])
 
 	return result;
 }
+*/
 
 
 float *createMandelbrotImage(int width, int height, float xS, float yS, float rad, int maxIteration)

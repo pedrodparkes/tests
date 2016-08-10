@@ -18,6 +18,7 @@
 #endif//DISABLE_OMP
 
 #include "iio.h"
+#include "../pngWritingTest/writePng.h"
 
 #include "tvl1flow_lib.c"
 
@@ -33,6 +34,12 @@
 #define PAR_DEFAULT_EPSILON 0.01
 #define PAR_DEFAULT_VERBOSE 0
 
+#define M_PI 3.14159265358979323846264338327
+
+float min(float a, float b)
+{
+	return a<b?a:b;
+}
 
 /**
  *
@@ -176,7 +183,40 @@ int main(int argc, char *argv[])
 		);
 
 		//save the optical flow
-		iio_save_image_float_split(outfile, u, nx, ny, 2);
+//		iio_save_image_float_split(outfile, u, nx, ny, 2);
+
+		float* hue = xmalloc(nx*ny*sizeof(float));
+		float* saturation = xmalloc(nx*ny*sizeof(float));
+
+		for(int j = 0; j<ny; j++)
+			for(int i = 0; i<nx; i++)
+			{
+				float x = u[j*nx + i];
+				float y = v[j*nx + i];
+
+				if(x==0 && y==0)
+				{
+					hue[j*nx+i] = 0.f;
+					saturation[j*nx+i] = 0.f;
+				}
+				else
+				{
+//					hue[j*width+i] = min(359.9, max(0, atan2(y,x)/M_PI*180));
+
+					hue[j*nx+i] = (float)i/nx;
+//					hue[j*nx+i] = atan2(y,x)/M_PI*180;
+//					saturation[j*nx+i] = min(1, sqrt(x*x+y*y));
+					saturation[j*nx+i] = (float)j/ny;
+				}
+			}
+
+
+		// save optical flow image
+		writePng(outfile, nx, ny, hue, saturation, "flow");
+
+
+		free(hue);
+		free(saturation);
 
 		//delete allocated memory
 		free(I0);

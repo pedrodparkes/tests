@@ -82,6 +82,7 @@ else
 	count=`ls 2>/dev/null -Ub1 -- $framemask | wc -l`
 fi
 
+# getting separate images
 if [ $count -le 0 ]; then
 	# no content to interfere with, proceed
 	echo input type is $(fiel $extension)
@@ -95,13 +96,19 @@ else
 	echo there are files satisfiing $(file $framemask), skiping frames extraction
 fi
 
+################
+count=9
+################
+
 ###
 ###	Flow files
 ###
 
 # flow file name format
-flowformat=$flowdir/flow-%06d.flo
-flowmask=$flowdir/flow-*.flo
+#flowformat=$flowdir/flow-%06d.flo		# for binary flow file
+#flowmask=$flowdir/flow-*.flo
+flowformat=$flowdir/flow-%06d.png		# for image representation
+flowmask=$flowdir/flow-*.png
 
 flowcount=-1
 # check if flow directory exists
