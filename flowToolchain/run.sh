@@ -88,6 +88,7 @@ if [ $count -le 0 ]; then
 	echo input type is $(fiel $extension)
 	echo extracting $(file $filefull) frames into $(dir $dirname) directory
 	printf "\n\n-----------------------------------------------------------------\n"
+#	ffmpeg -i $file -f image2 -s 512x288 $frameformat
 	ffmpeg -i $file -f image2 -s 256x144 $frameformat
 	printf "\n-----------------------------------------------------------------\n\n"
 	count=`ls 2>/dev/null -Ub1 -- $framemask | wc -l`
@@ -97,7 +98,7 @@ else
 fi
 
 ################
-count=9
+#count=30
 ################
 
 ###

@@ -185,28 +185,28 @@ int main(int argc, char *argv[])
 		//save the optical flow
 //		iio_save_image_float_split(outfile, u, nx, ny, 2);
 
+		
+		// generate optical flow image
 		float* hue = xmalloc(nx*ny*sizeof(float));
 		float* saturation = xmalloc(nx*ny*sizeof(float));
 
 		for(int j = 0; j<ny; j++)
 			for(int i = 0; i<nx; i++)
 			{
+				hue[j*nx+i] = 0.f;
+				saturation[j*nx+i] = 0.f;
+
 				float x = u[j*nx + i];
 				float y = v[j*nx + i];
 
-				if(x==0 && y==0)
+				if(x!=0 || y!=0)
 				{
-					hue[j*nx+i] = 0.f;
-					saturation[j*nx+i] = 0.f;
-				}
-				else
-				{
-//					hue[j*width+i] = min(359.9, max(0, atan2(y,x)/M_PI*180));
+//					hue[j*nx+i] = (float)i/nx;
+//					saturation[j*nx+i] = (float)j/ny;
 
-					hue[j*nx+i] = (float)i/nx;
-//					hue[j*nx+i] = atan2(y,x)/M_PI*180;
-//					saturation[j*nx+i] = min(1, sqrt(x*x+y*y));
-					saturation[j*nx+i] = (float)j/ny;
+					float angle = fmod(atan2(y,x)/(M_PI*2), 1);
+					hue[j*nx+i] = angle>=0?angle:angle+1;
+					saturation[j*nx+i] = min(1, sqrt(x*x+y*y));
 				}
 			}
 
