@@ -71,6 +71,8 @@ frameformat=$dirname/frame-%06d.png
 #framemask=$dirname/frame-00000[12].png
 framemask=$dirname/frame-*.png
 
+resolution="256x144"
+
 count=-1
 # check if directory exists
 if [ ! -d "$dirname" ]; then 
@@ -85,11 +87,11 @@ fi
 # getting separate images
 if [ $count -le 0 ]; then
 	# no content to interfere with, proceed
-	echo input type is $(fiel $extension)
+	echo input type is $(file $extension)
 	echo extracting $(file $filefull) frames into $(dir $dirname) directory
 	printf "\n\n-----------------------------------------------------------------\n"
 #	ffmpeg -i $file -f image2 -s 512x288 $frameformat
-	ffmpeg -i $file -f image2 -s 256x144 $frameformat
+	ffmpeg -i $file -f image2 -s $resolution $frameformat
 	printf "\n-----------------------------------------------------------------\n\n"
 	count=`ls 2>/dev/null -Ub1 -- $framemask | wc -l`
 else
@@ -149,7 +151,15 @@ else
 fi
 
 ###
-###	Flow images
+###	Generate flow video from flow images
 ###
 
+flowvideofile="$filename""_flow.""$extension"
 
+# check if flow file already exists
+if [ ! -f $flowvideofile ]; then
+	echo flow video not found, generating
+	ffmpeg -f image2 -i $flowformat -s $resolution $flowvideofile
+else
+	echo there is flow video with name $flowvideofile, skiping flow video generation
+fi
