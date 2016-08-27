@@ -16,6 +16,10 @@ SET PACKAGES=mintty,wget,ctags,diffutils,git,git-completion,git-svn,mercurial
 SET PACKAGES=%PACKAGES%,gcc-core,make,automake,autoconf,readline,libncursesw-devel,libiconv,zlib-devel,gettext
 SET PACKAGES=%PACKAGES%,lua,python,ruby
 SET PACKAGES=%PACKAGES%,vim,nano,gcc-g++
+REM -- graphics
+SET PACKAGES=%PACKAGES%,libnetpbm-devel,libnetpbm10,netpbm
+SET PACKAGES=%PACKAGES%,libpng16,libpng16-devel,mingw64-x86_64-libpng
+
 
 REM -- Do it!
 ECHO *** INSTALLING PACKAGES

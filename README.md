@@ -1,6 +1,9 @@
 # tests
 test projects for glash team
 
+flow toolchain depends on
+	- libpng
+	- ffmpeg
 
 # Cygwin ffmpeg files instruction
 0) https://ffmpeg.zeranoe.com/builds/ - downloading shared & dev builds x86/x64 depending on cygwin version
