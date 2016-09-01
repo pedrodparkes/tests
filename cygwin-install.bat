@@ -20,10 +20,20 @@ REM -- graphics
 SET PACKAGES=%PACKAGES%,libnetpbm-devel,libnetpbm10,netpbm
 SET PACKAGES=%PACKAGES%,libpng16,libpng16-devel,mingw64-x86_64-libpng
 
+REM --create missing folders and download cygwin installer
+ECHO [INFO] Downloading cygwin setup.exe
+mkdir C:\Temp\cygwindownload\
+Cscript.exe getWebFile1.vbs "https://cygwin.com/setup-x86_64.exe" "C:\Temp\cygwindownload\setup-x86_64.exe"
+if exist C:\Temp\cygwindownload\setup-x86_64.exe (
+   echo [INFO]: Cygwin setup was downloaded
+) else (
+   echo [FATAL]: Cygwin setup was not downloaded
+   goto end
+)
 
 REM -- Do it!
 ECHO *** INSTALLING PACKAGES
-setup-x86_64 -q -D -L -d -g -o -s %SITE% -l "%LOCALDIR%" -R "%ROOTDIR%" -C Base -P %PACKAGES%
+C:\Temp\cygwindownload\setup-x86_64.exe -q -D -L -d -g -o -s %SITE% -l "%LOCALDIR%" -R "%ROOTDIR%" -C Base -P %PACKAGES%
 
 REM -- Show what we did
 ECHO.
@@ -31,6 +41,9 @@ ECHO.
 ECHO cygwin installation updated
 ECHO  - %PACKAGES%
 ECHO.
+
+REM -- Install apt-cyg
+c:\cygwin64\bin\bash.exe --norc --noprofile -c "cd /bin/; /bin/wget http://rawgit.com/transcode-open/apt-cyg/master/apt-cyg; /bin/chmod +x apt-cyg"
 
 ENDLOCAL
 
