@@ -50,3 +50,6 @@ x86
 *.avi
 *.mkv
 *.flo
+
+# logs
+setup.log.full 
